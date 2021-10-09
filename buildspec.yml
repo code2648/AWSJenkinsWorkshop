@@ -5,12 +5,12 @@ phases:
     commands:
         - apt update -y
         - apt install python3-pip -y
-        - apt install build-essential python3-pip libffi-dev python3-dev python3-setuptools libssl-dev
-        - apt install python3-venv
+        - apt install build-essential python3-pip libffi-dev python3-dev python3-setuptools libssl-dev -y
+        - apt install python3-venv -y
         - mkdir flask_dir && cd flask_dir
-        - python3 -m venv venv
+        - python3 -m venv venv -y
         - source venv/bin/activate
-        - pip3 install flask
+        - pip3 install flask -y
         - flask --version
 
   build:
